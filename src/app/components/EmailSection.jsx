@@ -1,45 +1,49 @@
 "use client";
 import React, { useState } from "react";
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
+
 import Link from "next/link";
-import Image from "next/image";
-import { FaFacebook, FaGithub, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagramSquare,
+  FaLinkedin,
+} from "react-icons/fa";
 import { BsTelegram } from "react-icons/bs";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
+  // const handleSubmit = async (e) => {
+    // e.preventDefault();
+    // const data = {
+    //   email: e.target.email.value,
+    //   name: e.target.name.value,
+    //   message: e.target.message.value,
+    // };
+    // const JSONdata = JSON.stringify(data);
+    // const endpoint = "/api/send";
 
     // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
+    // const options = {
+    //   // The method is POST because we are sending data.
+    //   method: "POST",
+    //   // Tell the server we're sending JSON.
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   // Body of the request is the JSON data we created above.
+    //   body: JSONdata,
+    // };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    // const response = await fetch(endpoint, options);
+    // const resData = await response.json();
 
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
-    }
-  };
+    // if (response.status === 200) {
+      // console.log("Message sent.");
+      // setEmailSubmitted(true);
+    // }
+  // };
 
   return (
     <section
@@ -59,19 +63,19 @@ const EmailSection = () => {
         </p>
         <div className="socials flex mt-10 flex-row gap-7">
           <Link href="https://github.com/KenjayevObid">
-            <FaGithub className="text-white text-4xl hover:text-green-400"/>
+            <FaGithub className="text-white text-4xl hover:text-green-400" />
           </Link>
           <Link href="https://www.linkedin.com/in/obid-kenjaev-58b41b249/">
-            <FaLinkedin  className="text-white text-4xl  hover:text-green-400"/>
+            <FaLinkedin className="text-white text-4xl  hover:text-green-400" />
           </Link>
           <Link href="https://t.me/obidkenjayev">
-            <BsTelegram  className="text-white text-4xl  hover:text-green-400"/>
-          </Link>          
+            <BsTelegram className="text-white text-4xl  hover:text-green-400" />
+          </Link>
           <Link href="https://www.instagram.com/obid__kenjaev">
-            <FaInstagramSquare  className="text-white text-4xl  hover:text-green-400"/>
+            <FaInstagramSquare className="text-white text-4xl  hover:text-green-400" />
           </Link>
           <Link href="https://www.facebook.com/profile.php?id=100075700315557&mibextid=ZbWKwL">
-            <FaFacebook  className="text-white text-4xl  hover:text-green-400"/>
+            <FaFacebook className="text-white text-4xl  hover:text-green-400" />
           </Link>
         </div>
       </div>
@@ -81,7 +85,7 @@ const EmailSection = () => {
             Email sent successfully!
           </p>
         ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+          <form className="flex flex-col" >
             <div className="mb-6">
               <label
                 htmlFor="name"

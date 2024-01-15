@@ -13,22 +13,21 @@ const TAB_DATA = [
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
+          <li>React JS</li>
         </ul>
         <ul className="list-disc pl-8">
-          <li>React JS</li>
           <li>Next JS</li>
           <li>Node.js</li>
-        </ul>
-        <ul className="list-disc pl-8">
           <li>Material UI</li>
           <li>Tailwind CSS</li>
-          <li>MongoDB</li>
         </ul>
         <ul className="list-disc pl-8">
+          <li>MongoDB</li>
           <li>Express</li>
           <li>Netlify</li>
           <li>GitHub</li>
         </ul>
+        
       </div>
     ),
   },
