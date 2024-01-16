@@ -27,7 +27,7 @@ const projectsData = [
   {
     id: 3,
     title: "Downloeder",
-    description: "downloeder for pdf file",
+    description: "Downloeder for pdf file",
     image: "/images/projects/dow.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/KenjayevObid/downloeder.git",
@@ -77,6 +77,15 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "https://ob-havo-world.netlify.app",
+  },
+  {
+    id: 8,
+    title: "Project",
+    description: "Project css",
+    image: "/images/projects/css.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "https://oddiy-card.netlify.app",
   },
 ];
 
