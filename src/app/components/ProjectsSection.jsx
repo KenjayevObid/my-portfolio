@@ -91,12 +91,12 @@ const projectsData = [
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
-  const [onsplice, setOnSplice] = useState(6);
+  // const [onsplice, setOnSplice] = useState(6);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const OnSplice = () => {
-    setOnSplice(onsplice + 3);
-  };
+  // const OnSplice = () => {
+  //   setOnSplice(onsplice + 3);
+  // };
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
@@ -133,7 +133,7 @@ const ProjectsSection = () => {
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 mb-10">
-        {filteredProjects.splice(0, onsplice).map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
@@ -153,9 +153,9 @@ const ProjectsSection = () => {
         ))}
       </ul>
 
-      <Button className="mt-1 w-40 m-auto" onClick={OnSplice}>
+      {/* <Button className="mt-1 w-40 m-auto" onClick={OnSplice}>
         More
-      </Button>
+      </Button> */}
     </section>
   );
 };
