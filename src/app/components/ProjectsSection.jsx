@@ -7,8 +7,8 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "Waether",
+    description: "Search waether",
     image: "/images/projects/waether.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -16,8 +16,8 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "Random color picker",
+    description: "Copy color",
     image: "/images/projects/color-pica.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/KenjayevObid/colors-type.git",
