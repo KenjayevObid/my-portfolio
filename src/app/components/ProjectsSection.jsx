@@ -6,11 +6,10 @@ import { motion, useInView } from "framer-motion";
 import { Button } from "flowbite-react";
 
 const projectsData = [
-
   {
     id: 1,
     title: "Random color picker",
-    description: "Copy color",
+    technology: ["Html", "Css", "Javascript"],
     image: "/images/projects/color-pica.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/KenjayevObid/colors-type.git",
@@ -19,7 +18,7 @@ const projectsData = [
   {
     id: 2,
     title: "Headout",
-    description: "Headout travel world",
+    technology: ["React"],
     image: "/images/projects/trevel.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/KenjayevObid/Headout-travel.git",
@@ -28,7 +27,7 @@ const projectsData = [
   {
     id: 3,
     title: "Downloeder",
-    description: "Downloeder for pdf file",
+    technology: ["Html", "Css", "Javascript"],
     image: "/images/projects/dow.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/KenjayevObid/downloeder.git",
@@ -37,7 +36,7 @@ const projectsData = [
   {
     id: 4,
     title: "Home ads",
-    description: "Uzbekiston",
+    technology: ["React Js"],
     image: "/images/projects/uy.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/KenjayevObid/nozimjonning-uylari.git",
@@ -46,7 +45,7 @@ const projectsData = [
   {
     id: 5,
     title: "Clon You Tube",
-    description: "Project",
+    technology: ["Html", "Css"],
     image: "/images/projects/youtube.jpg",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -55,7 +54,7 @@ const projectsData = [
   {
     id: 6,
     title: "Cryptofrenz",
-    description: "Project",
+    technology: ["Html", "Css"],
     image: "/images/projects/cr.jpg",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -63,8 +62,8 @@ const projectsData = [
   },
   {
     id: 7,
-    title: "Cryptofrenz",
-    description: "Project",
+    title: "Houzing",
+    technology: ["React Js"],
     image: "/images/projects/housing.jpg",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -73,7 +72,7 @@ const projectsData = [
   {
     id: 8,
     title: "Waether",
-    description: "Search waether",
+    technology: ["Html", "Css", "Javascript"],
     image: "/images/projects/waether.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -82,7 +81,7 @@ const projectsData = [
   {
     id: 9,
     title: "Project",
-    description: "Project css",
+    technology: ["Html", "Css"],
     image: "/images/projects/css.jpg",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -95,9 +94,9 @@ const ProjectsSection = () => {
   const [onsplice, setOnSplice] = useState(6);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-const OnSplice = () => {
-  setOnSplice(onsplice + 3)
-}
+  const OnSplice = () => {
+    setOnSplice(onsplice + 3);
+  };
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
@@ -133,7 +132,7 @@ const OnSplice = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 mb-10">
         {filteredProjects.splice(0, onsplice).map((project, index) => (
           <motion.li
             key={index}
@@ -145,7 +144,7 @@ const OnSplice = () => {
             <ProjectCard
               key={project.id}
               title={project.title}
-              description={project.description}
+              technology={project.technology}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
@@ -153,7 +152,10 @@ const OnSplice = () => {
           </motion.li>
         ))}
       </ul>
-      <Button className="mt-7 w-40 m-auto" onClick={OnSplice}>More</Button>
+
+      <Button className="mt-1 w-40 m-auto" onClick={OnSplice}>
+        More
+      </Button>
     </section>
   );
 };
