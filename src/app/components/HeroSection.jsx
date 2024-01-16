@@ -28,7 +28,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Don't get tired of learning!
+            Lorem ipsum dolor sit amet.
           </p>
           <div>
             
