@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
+import { Button } from "flowbite-react";
 
 const projectsData = [
 
@@ -79,7 +80,7 @@ const projectsData = [
     previewUrl: "https://ob-havo-world.netlify.app",
   },
   {
-    id: 8,
+    id: 9,
     title: "Project",
     description: "Project css",
     image: "/images/projects/css.jpg",
@@ -91,9 +92,12 @@ const projectsData = [
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
+  const [onsplice, setOnSplice] = useState(6);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
+const OnSplice = () => {
+  setOnSplice(onsplice + 3)
+}
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
@@ -130,7 +134,7 @@ const ProjectsSection = () => {
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
+        {filteredProjects.splice(0, onsplice).map((project, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
@@ -149,6 +153,7 @@ const ProjectsSection = () => {
           </motion.li>
         ))}
       </ul>
+      <Button className="mt-7 w-40 m-auto" onClick={OnSplice}>More</Button>
     </section>
   );
 };
