@@ -27,10 +27,10 @@ const projectsData = [
     id: 3,
     title: "E-commerce Application",
     description: "Project 3 description",
-    image: "/images/projects/3.png",
+    image: "/images/projects/trevel.jpg",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/KenjayevObid/Headout-travel.git",
+    previewUrl: "https://travel-world-uz.netlify.app/",
   },
   {
     id: 4,
