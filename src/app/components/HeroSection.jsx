@@ -21,19 +21,14 @@ const HeroSection = () => {
             </span>
             <br></br>
             <TypeAnimation
-              sequence={[
-                "Obid Kenjaev",
-                2000,
-                "Frontend Developer",
-                2000,            
-              ]}
+              sequence={["Obid Kenjaev", 2000, "Frontend Developer", 2000]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          Don't get tired of learning!
+            Don't get tired of learning!
           </p>
           <div>
             <Link
