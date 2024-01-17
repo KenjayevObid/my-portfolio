@@ -7,6 +7,15 @@ import { Button } from "flowbite-react";
 
 const projectsData = [
   {
+    id: 0,
+    title: "Shopping",
+    technology: ["React JS", "Tailwind CSS"],
+    image: "/images/projects/shop.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/KenjayevObid/colors-type.git",
+    previewUrl: "https://shopping-uz-shoply.netlify.app/",
+  },
+  {
     id: 1,
     title: "Random color picker",
     technology: ["Html", "Css", "Javascript"],
@@ -86,6 +95,15 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "https://oddiy-card.netlify.app",
+  },
+  {
+    id: 10,
+    title: "TCJ-SPACE",
+    technology: ["React JS", "Tailwind CSS"],
+    image: "/images/projects/yearh.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "https://tcj-space.netlify.app",
   },
 ];
 
