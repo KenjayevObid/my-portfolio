@@ -27,7 +27,7 @@ const projectsData = [
   {
     id: 2,
     title: "Headout",
-    technology: ["React"],
+    technology: ["React", "Tailwind CSS"],
     image: "/images/projects/trevel.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/KenjayevObid/Headout-travel.git",

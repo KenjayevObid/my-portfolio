@@ -29,7 +29,8 @@ const ProjectCard = ({ imgUrl, title, technology, gitUrl, previewUrl }) => {
       <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <ul className=" flex text-[#ADB7BE]">
-        Technology: {technology.map((tecno, index) => (
+          Technology:{" "}
+          {technology.map((tecno, index) => (
             <button
               type="button"
               class=" px-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 ml-2"
